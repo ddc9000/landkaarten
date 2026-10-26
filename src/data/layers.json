@@ -1,0 +1,529 @@
+[
+  {
+    "id": "fricx",
+    "title": "Fricxkaart",
+    "year": 1712,
+    "order": 0,
+    "timelineLabel": "1712",
+    "periodLabel": "1712",
+    "kind": "historische-kaart",
+    "explanation": "Eugène-Henri Fricx publiceerde in 1712 een kaart van de Nederlanden op ongeveer 1:115.000. Lokeren staat erop, als stad in het Land van Waas, maar het marktplein zelf is op die schaal niet te lezen. Ver inzoomen maakt het blad zacht.",
+    "sourceName": "Digitaal Vlaanderen en KBR",
+    "sourceUrl": "https://geo.api.vlaanderen.be/HISTCART/wmts?service=WMTS&request=GetCapabilities",
+    "rightsHolder": "KBR en agentschap Digitaal Vlaanderen",
+    "licenseName": "Raadpleging via de dienst historische cartografie; geen commercieel hergebruik",
+    "licenseUrl": "https://www.vlaanderen.be/geopunt/vlaams-geoportaal/gebruiksvoorwaarden/disclaimer/intellectuele-eigendomsrechten",
+    "attribution": "Fricx © KBR en Digitaal Vlaanderen",
+    "premium": true,
+    "premiumReason": "De gegeorefereerde Fricxkaart is een product van de KBR en Digitaal Vlaanderen. Raadplegen via hun dienst mag; verspreiden, een download aanbieden of er een commerciële dienst van maken niet, tenzij zij toestemming geven.",
+    "regionId": "flanders",
+    "coverage": {
+      "bbox": [2.52, 50.64, 5.95, 51.51],
+      "note": "Kleine schaal, ongeveer 1:115.000, voor het Vlaamse landsgedeelte."
+    },
+    "tiles": {
+      "type": "xyz",
+      "url": "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=frickx&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
+      "minZoom": 6,
+      "maxZoom": 19,
+      "maxNativeZoom": 13
+    },
+    "verifiedOn": "2026-10-26"
+  },
+  {
+    "id": "ferraris",
+    "title": "Ferrariskaart",
+    "year": 1777,
+    "order": 0,
+    "timelineLabel": "1777",
+    "periodLabel": "1771–1778",
+    "kind": "historische-kaart",
+    "explanation": "De Kabinetskaart van graaf de Ferraris is de eerste systematische, gedetailleerde opname van de Oostenrijkse Nederlanden, gemaakt tussen 1771 en 1778. Op de Markt zie je de kerk, de bewoning en het landgebruik errond, nog vóór de kadasterplannen van de 19e eeuw.",
+    "sourceName": "Digitaal Vlaanderen en KBR",
+    "sourceUrl": "https://www.vlaanderen.be/datavindplaats/catalogus/ferrariskaart-kabinetskaart-der-oostenrijkse-nederlanden-en-het-prinsbisdom-luik-1771-1778",
+    "rightsHolder": "KBR en agentschap Digitaal Vlaanderen",
+    "licenseName": "Raadpleging via de dienst historische cartografie; geen commercieel hergebruik",
+    "licenseUrl": "https://www.vlaanderen.be/geopunt/vlaams-geoportaal/gebruiksvoorwaarden/disclaimer/intellectuele-eigendomsrechten",
+    "attribution": "Ferraris © KBR en Digitaal Vlaanderen",
+    "premium": true,
+    "premiumReason": "KBR gaf Digitaal Vlaanderen het recht om Ferraris te tonen ter raadpleging. Verder verspreiden en commerciële diensten zijn uitgesloten. De namen van KBR en Digitaal Vlaanderen moeten leesbaar blijven.",
+    "regionId": "flanders",
+    "coverage": {
+      "bbox": [2.52, 50.64, 5.95, 51.51],
+      "note": "Vlaams landsgedeelte van de Kabinetskaart. De georeferentie is in 2023 herzien."
+    },
+    "tiles": {
+      "type": "xyz",
+      "url": "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=ferraris&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
+      "minZoom": 6,
+      "maxZoom": 19,
+      "maxNativeZoom": 18
+    },
+    "verifiedOn": "2026-10-26"
+  },
+  {
+    "id": "abw",
+    "title": "Atlas der Buurtwegen",
+    "year": 1841,
+    "order": 0,
+    "timelineLabel": "1841",
+    "periodLabel": "ca. 1841",
+    "kind": "historische-kaart",
+    "explanation": "Rond 1841 tekenden de provincies per gemeente de buurtwegen en voetwegen, met de perceelsgrenzen erbij. Je legt er oude wegtracés naast het latere kadaster. Niet elk blad is even volledig: waar een gemeente ontbreekt, blijft de kaart leeg.",
+    "sourceName": "Digitaal Vlaanderen",
+    "sourceUrl": "https://geo.api.vlaanderen.be/HISTCART/wmts?service=WMTS&request=GetCapabilities",
+    "rightsHolder": "agentschap Digitaal Vlaanderen",
+    "licenseName": "Gebruiksrecht geografische webdiensten; open-datalicentie niet apart bevestigd",
+    "licenseUrl": "https://www.vlaanderen.be/digitaal-vlaanderen/onze-diensten-en-platformen/geografische-webdiensten/gebruiksrecht-en-privacyverklaring-geografische-webdiensten",
+    "attribution": "Atlas der Buurtwegen © Digitaal Vlaanderen",
+    "premium": true,
+    "premiumReason": "De raadpleegdienst is publiek, maar er is geen expliciete open-datalicentie zoals bij het GRB gevonden. Vraag Digitaal Vlaanderen om toestemming vóór een commerciële app of betaalde laag.",
+    "regionId": "flanders",
+    "coverage": {
+      "bbox": [2.52, 50.64, 5.95, 51.51],
+      "note": "Vlaamse provincies, met gaten waar een atlasblad ontbreekt."
+    },
+    "tiles": {
+      "type": "xyz",
+      "url": "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=abw&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
+      "minZoom": 6,
+      "maxZoom": 19,
+      "maxNativeZoom": 18
+    },
+    "verifiedOn": "2026-10-26"
+  },
+  {
+    "id": "popp",
+    "title": "Popp-kaart",
+    "year": 1842,
+    "order": 0,
+    "timelineLabel": "1842",
+    "periodLabel": "1842–1879",
+    "kind": "historische-kaart",
+    "explanation": "Philippe Popp werkte van 1842 tot zijn dood in 1879 aan een kadastrale atlas van de Belgische gemeenten. Deze laag toont de gescande plannen van Vlaanderen, waar nodig aangevuld met kopieën van UGent, en gelegd op het huidige GRB. Je leest er de 19e-eeuwse perceelsstructuur.",
+    "sourceName": "Digitaal Vlaanderen",
+    "sourceUrl": "https://www.vlaanderen.be/datavindplaats/catalogus/popp-atlas-cadastrale-parcellaire-de-la-belgique-1842-1879",
+    "rightsHolder": "agentschap Digitaal Vlaanderen (bronmateriaal KBR en UGent)",
+    "licenseName": "Gebruiksrecht geografische webdiensten; open-datalicentie niet apart bevestigd",
+    "licenseUrl": "https://www.vlaanderen.be/digitaal-vlaanderen/onze-diensten-en-platformen/geografische-webdiensten/gebruiksrecht-en-privacyverklaring-geografische-webdiensten",
+    "attribution": "Popp © Digitaal Vlaanderen",
+    "premium": true,
+    "premiumReason": "Eigenaar van de dataset is Digitaal Vlaanderen; de scans komen van de KBR en UGent. Popp valt niet onder het expliciete KBR-verbod dat Ferraris, Vandermaelen en Fricx noemt, maar een open-datalicentie is ook niet gevonden. Toestemming vragen vóór commercieel gebruik.",
+    "regionId": "flanders",
+    "coverage": {
+      "bbox": [2.52, 50.64, 5.95, 51.51],
+      "note": "Vlaams landsgedeelte. Schaal van de originele plannen ongeveer 1:1.250 tot 1:5.000."
+    },
+    "tiles": {
+      "type": "xyz",
+      "url": "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=popp&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
+      "minZoom": 6,
+      "maxZoom": 19,
+      "maxNativeZoom": 18
+    },
+    "verifiedOn": "2026-10-26"
+  },
+  {
+    "id": "vandermaelen",
+    "title": "Vandermaelenkaart",
+    "year": 1846,
+    "order": 0,
+    "timelineLabel": "1846",
+    "periodLabel": "1846–1854",
+    "kind": "historische-kaart",
+    "explanation": "Philippe Vandermaelen bracht België tussen 1846 en 1854 in kaart op 1:20.000. Het is de eerste topografische kaart van het jonge koninkrijk op die schaal: reliëf, wegen en aaneengesloten bebouwing. Lokeren ligt er als compacte stad aan de Durme.",
+    "sourceName": "Digitaal Vlaanderen en KBR",
+    "sourceUrl": "https://geo.api.vlaanderen.be/HISTCART/wmts?service=WMTS&request=GetCapabilities",
+    "rightsHolder": "KBR en agentschap Digitaal Vlaanderen",
+    "licenseName": "Raadpleging via de dienst historische cartografie; geen commercieel hergebruik",
+    "licenseUrl": "https://www.vlaanderen.be/geopunt/vlaams-geoportaal/gebruiksvoorwaarden/disclaimer/intellectuele-eigendomsrechten",
+    "attribution": "Vandermaelen © KBR en Digitaal Vlaanderen",
+    "premium": true,
+    "premiumReason": "Zelfde beperking als Ferraris en Fricx: de KBR en Digitaal Vlaanderen laten de kaart raadplegen via de officiële dienst. Commercieel gebruik en herdistributie vragen hun toestemming.",
+    "regionId": "flanders",
+    "coverage": {
+      "bbox": [2.52, 50.64, 5.95, 51.51],
+      "note": "Vlaams landsgedeelte van de Carte topographique de la Belgique, 1:20.000."
+    },
+    "tiles": {
+      "type": "xyz",
+      "url": "https://geo.api.vlaanderen.be/HISTCART/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=vandermaelen&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
+      "minZoom": 6,
+      "maxZoom": 19,
+      "maxNativeZoom": 18
+    },
+    "verifiedOn": "2026-10-26"
+  },
+  {
+    "id": "ngi-1873",
+    "title": "Topokaart NGI",
+    "year": 1873,
+    "order": 0,
+    "timelineLabel": "1873",
+    "periodLabel": "ca. 1873",
+    "kind": "historische-kaart",
+    "explanation": "Naadloze mozaïek van de Belgische topokaart, door het NGI via Cartesius ontsloten als editie 1873. De bladen zelf lopen vanaf ongeveer 1860. Je ziet het stratennet, de spoorlijn en de bewoning strakker dan op Ferraris.",
+    "sourceName": "Nationaal Geografisch Instituut, Cartesius",
+    "sourceUrl": "https://ngi.be/faq/",
+    "rightsHolder": "Nationaal Geografisch Instituut",
+    "licenseName": "Consultatievoorwaarden Cartesius; geen open data",
+    "licenseUrl": "https://ngi.be/faq/",
+    "attribution": "Topokaart ca. 1873 © Nationaal Geografisch Instituut",
+    "premium": true,
+    "premiumReason": "Historische topokaarten zijn volgens het NGI geen open data. De tegeldienst is het eindpunt dat Cartesius gebruikt en is geen officieel product. Gebruik buiten privéconsultatie vraagt toestemming; commercieel gebruik loopt via sales@ngi.be.",
+    "regionId": "belgium",
+    "coverage": {
+      "bbox": [2.35, 49.45, 6.5, 51.55],
+      "note": "België. De mozaïek heet 1873 en bevat bladen vanaf ongeveer 1860."
+    },
+    "tiles": {
+      "type": "xyz",
+      "url": "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__140/MapServer/tile/{z}/{y}/{x}",
+      "minZoom": 7,
+      "maxZoom": 18,
+      "maxNativeZoom": 17
+    },
+    "verifiedOn": "2026-10-26"
+  },
+  {
+    "id": "ngi-1904",
+    "title": "Topokaart NGI",
+    "year": 1904,
+    "order": 0,
+    "timelineLabel": "1904",
+    "periodLabel": "ca. 1904",
+    "kind": "historische-kaart",
+    "explanation": "Dezelfde topografische reeks, samengevoegd tot de editie rond 1904 (bladen vanaf ongeveer 1881). Station, steenwegen en de groei van de stad zijn duidelijker dan op de kaart van 1873.",
+    "sourceName": "Nationaal Geografisch Instituut, Cartesius",
+    "sourceUrl": "https://ngi.be/faq/",
+    "rightsHolder": "Nationaal Geografisch Instituut",
+    "licenseName": "Consultatievoorwaarden Cartesius; geen open data",
+    "licenseUrl": "https://ngi.be/faq/",
+    "attribution": "Topokaart ca. 1904 © Nationaal Geografisch Instituut",
+    "premium": true,
+    "premiumReason": "Historische topokaarten zijn volgens het NGI geen open data. Commercieel gebruik en hergebruik buiten Cartesius vragen een licentie bij het NGI (sales@ngi.be).",
+    "regionId": "belgium",
+    "coverage": {
+      "bbox": [2.35, 49.45, 6.5, 51.55],
+      "note": "België. Editie rond 1904, bladen vanaf ongeveer 1881."
+    },
+    "tiles": {
+      "type": "xyz",
+      "url": "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__450/MapServer/tile/{z}/{y}/{x}",
+      "minZoom": 7,
+      "maxZoom": 18,
+      "maxNativeZoom": 17
+    },
+    "verifiedOn": "2026-10-26"
+  },
+  {
+    "id": "ngi-1939",
+    "title": "Topokaart NGI",
+    "year": 1939,
+    "order": 0,
+    "timelineLabel": "1939",
+    "periodLabel": "ca. 1939",
+    "kind": "historische-kaart",
+    "explanation": "Topografische mozaïek die Cartesius als editie 1939 ontsluit. De bladen lopen vanaf het einde van de 19e eeuw; samen tonen ze Lokeren in de jaren net vóór de Tweede Wereldoorlog. Een naadloze luchtfoto van de Markt uit 1940–1946 is niet gevonden.",
+    "sourceName": "Nationaal Geografisch Instituut, Cartesius",
+    "sourceUrl": "https://ngi.be/faq/",
+    "rightsHolder": "Nationaal Geografisch Instituut",
+    "licenseName": "Consultatievoorwaarden Cartesius; geen open data",
+    "licenseUrl": "https://ngi.be/faq/",
+    "attribution": "Topokaart ca. 1939 © Nationaal Geografisch Instituut",
+    "premium": true,
+    "premiumReason": "Historische topokaarten zijn volgens het NGI geen open data. Commercieel gebruik en hergebruik buiten Cartesius vragen een licentie bij het NGI (sales@ngi.be).",
+    "regionId": "belgium",
+    "coverage": {
+      "bbox": [2.35, 49.45, 6.5, 51.55],
+      "note": "België. Editie rond 1939, bladen vanaf ongeveer 1883."
+    },
+    "tiles": {
+      "type": "xyz",
+      "url": "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__800/MapServer/tile/{z}/{y}/{x}",
+      "minZoom": 7,
+      "maxZoom": 18,
+      "maxNativeZoom": 17
+    },
+    "verifiedOn": "2026-10-26"
+  },
+  {
+    "id": "ngi-1969",
+    "title": "Topokaart NGI",
+    "year": 1969,
+    "order": 0,
+    "timelineLabel": "1969",
+    "periodLabel": "ca. 1969",
+    "kind": "historische-kaart",
+    "explanation": "Topografische mozaïek rond 1969, met bladen vanaf ongeveer 1952. De naoorlogse wijken en het bredere wegennet staan erop, nog als getekende kaart en niet als foto.",
+    "sourceName": "Nationaal Geografisch Instituut, Cartesius",
+    "sourceUrl": "https://ngi.be/faq/",
+    "rightsHolder": "Nationaal Geografisch Instituut",
+    "licenseName": "Consultatievoorwaarden Cartesius; geen open data",
+    "licenseUrl": "https://ngi.be/faq/",
+    "attribution": "Topokaart ca. 1969 © Nationaal Geografisch Instituut",
+    "premium": true,
+    "premiumReason": "Historische topokaarten zijn volgens het NGI geen open data. Commercieel gebruik en hergebruik buiten Cartesius vragen een licentie bij het NGI (sales@ngi.be).",
+    "regionId": "belgium",
+    "coverage": {
+      "bbox": [2.35, 49.45, 6.5, 51.55],
+      "note": "België. Editie rond 1969, bladen vanaf ongeveer 1952."
+    },
+    "tiles": {
+      "type": "xyz",
+      "url": "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__1100/MapServer/tile/{z}/{y}/{x}",
+      "minZoom": 7,
+      "maxZoom": 18,
+      "maxNativeZoom": 17
+    },
+    "verifiedOn": "2026-10-26"
+  },
+  {
+    "id": "ortho-1971",
+    "title": "Luchtfoto 1971",
+    "year": 1971,
+    "order": 0,
+    "timelineLabel": "1971",
+    "periodLabel": "1971",
+    "kind": "luchtfoto",
+    "explanation": "Zwart-wit orthofoto uit de zomer van 1971, resolutie 1 meter, gebiedsdekkend voor Vlaanderen. Een van de oudste fotografische overzichten waarop het plein, de daken en de Durme samen te zien zijn.",
+    "sourceName": "Digitaal Vlaanderen",
+    "sourceUrl": "https://www.vlaanderen.be/digitaal-vlaanderen/onze-diensten-en-platformen/luchtopnamen/kleinschalige-zomerluchtopnamen",
+    "rightsHolder": "agentschap Digitaal Vlaanderen",
+    "licenseName": "Gebruiksrecht geografische webdiensten, met bronvermelding",
+    "licenseUrl": "https://www.vlaanderen.be/digitaal-vlaanderen/onze-diensten-en-platformen/geografische-webdiensten/gebruiksrecht-en-privacyverklaring-geografische-webdiensten",
+    "attribution": "Orthofoto 1971 © Digitaal Vlaanderen",
+    "premium": false,
+    "premiumReason": null,
+    "regionId": "flanders",
+    "coverage": {
+      "bbox": [2.52, 50.64, 5.95, 51.51],
+      "note": "Kleinschalige zomeropname, panchromatisch, 1 m."
+    },
+    "tiles": {
+      "type": "xyz",
+      "url": "https://geo.api.vlaanderen.be/OKZ/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=okzpan71vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
+      "minZoom": 6,
+      "maxZoom": 19,
+      "maxNativeZoom": 18
+    },
+    "verifiedOn": "2026-10-26"
+  },
+  {
+    "id": "ortho-1979",
+    "title": "Luchtfoto 1979–1990",
+    "year": 1979,
+    "order": 0,
+    "timelineLabel": "1979",
+    "periodLabel": "1979–1990",
+    "kind": "luchtfoto",
+    "explanation": "Kleurenorthofoto, samengesteld uit zomeropnamen van 1979 tot 1990, resolutie 1 meter. De vliegdag verschilt per stuk van Vlaanderen. Het is het eerste kleurenbeeld van de Markt in deze reeks.",
+    "sourceName": "Digitaal Vlaanderen",
+    "sourceUrl": "https://www.vlaanderen.be/digitaal-vlaanderen/onze-diensten-en-platformen/luchtopnamen/kleinschalige-zomerluchtopnamen",
+    "rightsHolder": "agentschap Digitaal Vlaanderen",
+    "licenseName": "Gebruiksrecht geografische webdiensten, met bronvermelding",
+    "licenseUrl": "https://www.vlaanderen.be/digitaal-vlaanderen/onze-diensten-en-platformen/geografische-webdiensten/gebruiksrecht-en-privacyverklaring-geografische-webdiensten",
+    "attribution": "Orthofoto 1979–1990 © Digitaal Vlaanderen",
+    "premium": false,
+    "premiumReason": null,
+    "regionId": "flanders",
+    "coverage": {
+      "bbox": [2.52, 50.64, 5.95, 51.51],
+      "note": "Kleinschalige zomermozaïek, kleur, 1 m."
+    },
+    "tiles": {
+      "type": "xyz",
+      "url": "https://geo.api.vlaanderen.be/OKZ/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=okzrgb79_90vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
+      "minZoom": 6,
+      "maxZoom": 19,
+      "maxNativeZoom": 18
+    },
+    "verifiedOn": "2026-10-26"
+  },
+  {
+    "id": "ngi-1981",
+    "title": "Topokaart NGI",
+    "year": 1981,
+    "order": 0,
+    "timelineLabel": "1981",
+    "periodLabel": "ca. 1981",
+    "kind": "historische-kaart",
+    "explanation": "Topografische mozaïek rond 1981 (bladen vanaf ongeveer 1961). Op de Markt van Lokeren is de editie 1989 dezelfde tegel; die staat daarom niet apart in de tijdlijn.",
+    "sourceName": "Nationaal Geografisch Instituut, Cartesius",
+    "sourceUrl": "https://ngi.be/faq/",
+    "rightsHolder": "Nationaal Geografisch Instituut",
+    "licenseName": "Consultatievoorwaarden Cartesius; geen open data",
+    "licenseUrl": "https://ngi.be/faq/",
+    "attribution": "Topokaart ca. 1981 © Nationaal Geografisch Instituut",
+    "premium": true,
+    "premiumReason": "Historische topokaarten zijn volgens het NGI geen open data. Commercieel gebruik en hergebruik buiten Cartesius vragen een licentie bij het NGI (sales@ngi.be).",
+    "regionId": "belgium",
+    "coverage": {
+      "bbox": [2.35, 49.45, 6.5, 51.55],
+      "note": "België. Editie rond 1981, bladen vanaf ongeveer 1961."
+    },
+    "tiles": {
+      "type": "xyz",
+      "url": "https://wmts.ngi.be/arcgis/rest/services/seamless_carto__default__3857__1220/MapServer/tile/{z}/{y}/{x}",
+      "minZoom": 7,
+      "maxZoom": 18,
+      "maxNativeZoom": 17
+    },
+    "verifiedOn": "2026-10-26"
+  },
+  {
+    "id": "ortho-2000",
+    "title": "Luchtfoto 2000–2003",
+    "year": 2000,
+    "order": 0,
+    "timelineLabel": "2000",
+    "periodLabel": "2000–2003",
+    "kind": "luchtfoto",
+    "explanation": "Middenschalige kleurenorthofoto uit de wintervluchten van 2000 tot 2003. Zonder bladeren lees je daken, tuinen en het plein scherper dan op de oudere zomerreeks.",
+    "sourceName": "Digitaal Vlaanderen",
+    "sourceUrl": "https://www.vlaanderen.be/digitaal-vlaanderen/onze-diensten-en-platformen/luchtopnamen/middenschalige-winterluchtopnamen",
+    "rightsHolder": "agentschap Digitaal Vlaanderen",
+    "licenseName": "Gebruiksrecht geografische webdiensten, met bronvermelding",
+    "licenseUrl": "https://www.vlaanderen.be/digitaal-vlaanderen/onze-diensten-en-platformen/geografische-webdiensten/gebruiksrecht-en-privacyverklaring-geografische-webdiensten",
+    "attribution": "Orthofoto 2000–2003 © Digitaal Vlaanderen",
+    "premium": false,
+    "premiumReason": null,
+    "regionId": "flanders",
+    "coverage": {
+      "bbox": [2.52, 50.64, 5.95, 51.51],
+      "note": "Wintermozaïek, kleur, ongeveer 25 cm."
+    },
+    "tiles": {
+      "type": "xyz",
+      "url": "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb00_03vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
+      "minZoom": 6,
+      "maxZoom": 20,
+      "maxNativeZoom": 19
+    },
+    "verifiedOn": "2026-10-26"
+  },
+  {
+    "id": "ortho-2015",
+    "title": "Luchtfoto 2015",
+    "year": 2015,
+    "order": 0,
+    "timelineLabel": "2015",
+    "periodLabel": "2015",
+    "kind": "luchtfoto",
+    "explanation": "Winterorthofoto van 2015, resolutie ongeveer 25 cm. Het plein, de kerk en de daken rond de Markt zijn al bijna het beeld van vandaag, met nog de inrichting van dat jaar.",
+    "sourceName": "Digitaal Vlaanderen",
+    "sourceUrl": "https://www.vlaanderen.be/digitaal-vlaanderen/onze-diensten-en-platformen/luchtopnamen/middenschalige-winterluchtopnamen",
+    "rightsHolder": "agentschap Digitaal Vlaanderen",
+    "licenseName": "Gebruiksrecht geografische webdiensten, met bronvermelding",
+    "licenseUrl": "https://www.vlaanderen.be/digitaal-vlaanderen/onze-diensten-en-platformen/geografische-webdiensten/gebruiksrecht-en-privacyverklaring-geografische-webdiensten",
+    "attribution": "Orthofoto 2015 © Digitaal Vlaanderen",
+    "premium": false,
+    "premiumReason": null,
+    "regionId": "flanders",
+    "coverage": {
+      "bbox": [2.52, 50.64, 5.95, 51.51],
+      "note": "Winteropname, kleur. Jaarlagen 2012–2025 bestaan op dezelfde dienst; zie BRONNEN.md."
+    },
+    "tiles": {
+      "type": "xyz",
+      "url": "https://geo.api.vlaanderen.be/OMW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgb15vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
+      "minZoom": 6,
+      "maxZoom": 20,
+      "maxNativeZoom": 19
+    },
+    "verifiedOn": "2026-10-26"
+  },
+  {
+    "id": "ortho-recent",
+    "title": "Nieuwste luchtfoto",
+    "year": 2025,
+    "order": 0,
+    "timelineLabel": "2025",
+    "periodLabel": "meest recent",
+    "kind": "luchtfoto",
+    "explanation": "De nieuwste winterorthofoto van Digitaal Vlaanderen, als mozaïek van 15 cm. Dit is het Lokeren van nu vanuit de lucht. De dienst schuift mee telkens een nieuw gebied ingevlogen is; bij de controle verwees de metadata naar compilatie 2025.04.",
+    "sourceName": "Digitaal Vlaanderen",
+    "sourceUrl": "https://www.vlaanderen.be/datavindplaats/catalogus/orthofotomozaiek-middenschalig-winteropnamen-kleur-meest-recent-vlaanderen-202504",
+    "rightsHolder": "agentschap Digitaal Vlaanderen",
+    "licenseName": "Gebruiksrecht geografische webdiensten, met bronvermelding",
+    "licenseUrl": "https://www.vlaanderen.be/digitaal-vlaanderen/onze-diensten-en-platformen/luchtopnamen/middenschalige-winterluchtopnamen",
+    "attribution": "Nieuwste orthofoto © Digitaal Vlaanderen",
+    "premium": false,
+    "premiumReason": null,
+    "regionId": "flanders",
+    "coverage": {
+      "bbox": [2.52, 50.64, 5.95, 51.51],
+      "note": "Vlaams en Brussels Hoofdstedelijk Gewest. Resolutie 15 cm."
+    },
+    "tiles": {
+      "type": "xyz",
+      "url": "https://geo.api.vlaanderen.be/OMWRGBMRVL/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=omwrgbmrvl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
+      "minZoom": 6,
+      "maxZoom": 20,
+      "maxNativeZoom": 19
+    },
+    "verifiedOn": "2026-10-26"
+  },
+  {
+    "id": "grb",
+    "title": "GRB-basiskaart",
+    "year": 2026,
+    "order": 0,
+    "timelineLabel": "nu",
+    "periodLabel": "vandaag",
+    "kind": "actuele-kaart",
+    "explanation": "De officiële basiskaart van Vlaanderen: gebouwen, percelen, wegen en water uit het Grootschalig Referentiebestand. Geen foto, wel de lijnkaart die onder adressen en vergunningen ligt.",
+    "sourceName": "Digitaal Vlaanderen",
+    "sourceUrl": "https://www.vlaanderen.be/digitaal-vlaanderen/onze-diensten-en-platformen/basiskaart-vlaanderen-grb/grb-webdiensten",
+    "rightsHolder": "agentschap Digitaal Vlaanderen",
+    "licenseName": "Gratis open data licentie Vlaanderen v1.02",
+    "licenseUrl": "https://www.vlaanderen.be/digitaal-vlaanderen/onze-oplossingen/open-data/voorwaarden-voor-het-hergebruik-van-overheidsinformatie",
+    "attribution": "Bron: Grootschalig Referentiebestand Vlaanderen, Digitaal Vlaanderen",
+    "premium": false,
+    "premiumReason": null,
+    "regionId": "flanders",
+    "coverage": {
+      "bbox": [2.52, 50.64, 5.95, 51.51],
+      "note": "Actuele GRB-basiskaart in kleur."
+    },
+    "tiles": {
+      "type": "xyz",
+      "url": "https://geo.api.vlaanderen.be/GRB/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=grb_bsk&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
+      "minZoom": 6,
+      "maxZoom": 20,
+      "maxNativeZoom": 19
+    },
+    "verifiedOn": "2026-10-26"
+  },
+  {
+    "id": "osm",
+    "title": "OpenStreetMap",
+    "year": 2026,
+    "order": 1,
+    "timelineLabel": "nu",
+    "periodLabel": "vandaag",
+    "kind": "actuele-kaart",
+    "explanation": "Straatkaart met Nederlandse namen, getekend door OpenStreetMap België op basis van OpenStreetMap. Handig om een straat te lezen naast de officiële GRB-lijnkaart en de luchtfoto.",
+    "sourceName": "OpenStreetMap België",
+    "sourceUrl": "https://www.openstreetmap.org/copyright",
+    "rightsHolder": "OpenStreetMap-bijdragers",
+    "licenseName": "ODbL, met naamsvermelding",
+    "licenseUrl": "https://www.openstreetmap.org/copyright",
+    "attribution": "© OpenStreetMap-bijdragers · tegels OpenStreetMap België",
+    "premium": false,
+    "premiumReason": null,
+    "regionId": "world",
+    "coverage": {
+      "bbox": [-180, -85, 180, 85],
+      "note": "De data mogen hergebruikt worden onder de ODbL. De tegelserver is een gemeenschapsdienst; een drukke app hoort eigen tegels te voorzien."
+    },
+    "tiles": {
+      "type": "xyz",
+      "url": "https://tile.openstreetmap.be/osmbe-nl/{z}/{x}/{y}.png",
+      "minZoom": 0,
+      "maxZoom": 19,
+      "maxNativeZoom": 18
+    },
+    "verifiedOn": "2026-10-26"
+  }
+]

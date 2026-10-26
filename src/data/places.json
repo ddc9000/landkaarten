@@ -1,0 +1,44 @@
+[
+  {
+    "id": "lokeren",
+    "label": "Markt, Lokeren",
+    "lat": 51.104717,
+    "lng": 3.990575
+  },
+  {
+    "id": "gent",
+    "label": "Korenmarkt, Gent",
+    "lat": 51.0549,
+    "lng": 3.721881
+  },
+  {
+    "id": "brugge",
+    "label": "Markt, Brugge",
+    "lat": 51.208638,
+    "lng": 3.223972
+  },
+  {
+    "id": "antwerpen",
+    "label": "Grote Markt, Antwerpen",
+    "lat": 51.221068,
+    "lng": 4.399885
+  },
+  {
+    "id": "mechelen",
+    "label": "Grote Markt, Mechelen",
+    "lat": 51.028014,
+    "lng": 4.479592
+  },
+  {
+    "id": "leuven",
+    "label": "Grote Markt, Leuven",
+    "lat": 50.879146,
+    "lng": 4.700873
+  },
+  {
+    "id": "hasselt",
+    "label": "Grote Markt, Hasselt",
+    "lat": 50.92972,
+    "lng": 5.337379
+  }
+]
