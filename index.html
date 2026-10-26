@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1b1612" />
+    <meta
+      name="description"
+      content="Landkaarten toont historische en huidige kaarten van Vlaanderen op dezelfde plek. Begin op de Markt van Lokeren en schuif door de tijd."
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Landkaarten" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <title>Landkaarten</title>
+  </head>
+  <body>
+    <div id="loadbar" aria-hidden="true"></div>
+    <div id="app">
+      <div id="map" role="application" aria-label="Kaart van Vlaanderen"></div>
+
+      <header class="top">
+        <div class="brand">
+          <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="16" cy="16" r="12" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+            <path d="M16 5.5 L18.4 16 L16 14.2 L13.6 16 Z" fill="currentColor"></path>
+            <path d="M16 26.5 L13.6 16 L16 17.8 L18.4 16 Z" fill="currentColor" opacity="0.45"></path>
+          </svg>
+          <div>
+            <p class="eyebrow">Vlaanderen door de tijd</p>
+            <h1>Landkaarten</h1>
+          </div>
+        </div>
+
+        <form id="search-form" role="search">
+          <label class="sr-only" for="search">Zoek een plaats of adres in Vlaanderen</label>
+          <input
+            id="search"
+            type="search"
+            placeholder="Zoek een plaats in Vlaanderen"
+            autocomplete="off"
+            enterkeyhint="search"
+          />
+          <ul id="suggestions" role="listbox" hidden></ul>
+        </form>
+
+        <button id="compare-toggle" type="button" aria-pressed="false">Vergelijk</button>
+      </header>
+
+      <button
+        id="swipe-handle"
+        type="button"
+        hidden
+        aria-label="Schuif tussen de twee kaarten"
+        aria-valuemin="4"
+        aria-valuemax="96"
+        aria-valuenow="54"
+        role="slider"
+      ></button>
+
+      <aside id="panel">
+        <article id="info" aria-live="off"></article>
+        <div id="compare-bar" hidden>
+          <label>
+            Vergelijk met
+            <select id="compare-with"></select>
+          </label>
+          <div class="modes">
+            <button id="mode-swipe" type="button" aria-pressed="true">Schuiven</button>
+            <button id="mode-opacity" type="button" aria-pressed="false">Dekking</button>
+          </div>
+          <label>
+            Schuif
+            <input id="swipe" type="range" min="4" max="96" value="54" />
+          </label>
+          <label>
+            Dekking
+            <input id="opacity" type="range" min="15" max="100" value="55" />
+          </label>
+        </div>
+        <nav id="timeline" aria-label="Tijdlijn van kaarten" role="list"></nav>
+        <p class="hint">Pijltjes links en rechts kiezen een ander jaar. De plek blijft staan.</p>
+      </aside>
+
+      <p id="offline" class="offline" hidden>
+        De kaarten hebben een internetverbinding nodig. De app zelf blijft open.
+      </p>
+      <p id="live" class="sr-only" aria-live="polite"></p>
+    </div>
+    <noscript>Landkaarten heeft JavaScript nodig om de kaarten te tonen.</noscript>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

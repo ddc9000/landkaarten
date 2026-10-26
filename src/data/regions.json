@@ -1,0 +1,22 @@
+{
+  "regions": [
+    {
+      "id": "flanders",
+      "name": "Vlaanderen",
+      "bbox": [2.52, 50.64, 5.95, 51.51],
+      "geocoder": "vlaanderen-geolocation-v4"
+    },
+    {
+      "id": "belgium",
+      "name": "België",
+      "bbox": [2.35, 49.45, 6.5, 51.55],
+      "geocoder": "vlaanderen-geolocation-v4"
+    },
+    {
+      "id": "world",
+      "name": "Wereld",
+      "bbox": [-180, -85, 180, 85],
+      "geocoder": "vlaanderen-geolocation-v4"
+    }
+  ]
+}
