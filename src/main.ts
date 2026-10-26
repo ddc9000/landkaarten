@@ -261,7 +261,9 @@ function renderTimeline(): void {
       render();
     });
     ui.timelineEl.append(button);
-    if (selected) button.scrollIntoView({ block: "nearest" });
+    if (selected) {
+      requestAnimationFrame(() => button.scrollIntoView({ block: "nearest" }));
+    }
   }
 }
 
@@ -294,7 +296,6 @@ function renderCompare(): void {
   ui.swipeInput.parentElement?.toggleAttribute("hidden", state.compareMode !== "swipe");
   ui.opacityInput.parentElement?.toggleAttribute("hidden", state.compareMode !== "opacity");
 
-  const previous = ui.compareSelect.value;
   ui.compareSelect.replaceChildren();
   for (const layer of layers) {
     if (layer.id === state.layerId) continue;
@@ -303,12 +304,15 @@ function renderCompare(): void {
     option.textContent = `${layer.timelineLabel} · ${layer.title}`;
     ui.compareSelect.append(option);
   }
-  const wanted = state.compareId && state.compareId !== state.layerId ? state.compareId : previous;
-  if (wanted && layerById(layers, wanted) && wanted !== state.layerId) {
+  const wanted =
+    state.compareId && state.compareId !== state.layerId
+      ? state.compareId
+      : state.compareEnabled
+        ? suggestCompareId(layers, state.layerId)
+        : null;
+  if (wanted && layerById(layers, wanted)) {
     ui.compareSelect.value = wanted;
-    state = { ...state, compareId: wanted };
-  } else if (ui.compareSelect.options.length > 0) {
-    state = { ...state, compareId: ui.compareSelect.value };
+    if (state.compareId !== wanted) state = { ...state, compareId: wanted };
   }
 
   ui.swipeInput.value = String(state.swipe);
