@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#1b1612" />
+    <meta name="theme-color" content="#07080a" />
     <meta
       name="description"
       content="Landkaarten toont historische en huidige kaarten van Vlaanderen op dezelfde plek. Begin op de Markt van Lokeren en schuif door de tijd."
@@ -22,33 +22,102 @@
     <div id="app">
       <div id="map" role="application" aria-label="Kaart van Vlaanderen"></div>
 
-      <header class="top">
-        <div class="brand">
-          <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
-            <circle cx="16" cy="16" r="12" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
-            <path d="M16 5.5 L18.4 16 L16 14.2 L13.6 16 Z" fill="currentColor"></path>
-            <path d="M16 26.5 L13.6 16 L16 17.8 L18.4 16 Z" fill="currentColor" opacity="0.45"></path>
+      <div class="hud-top">
+        <div class="compass" role="img" aria-label="Noorden boven. De kaart draait niet.">
+          <svg viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="13.5" fill="none" stroke="currentColor" stroke-width="1"></circle>
+            <path d="M20 7.5 V12 M20 28 V32.5 M7.5 20 H12 M28 20 H32.5" stroke="currentColor" stroke-width="1"></path>
+            <path d="M20 11 L22.1 20 L20 18.2 L17.9 20 Z" fill="#ff9f1a"></path>
+            <path d="M20 29 L17.9 20 L20 21.8 L22.1 20 Z" fill="currentColor" opacity="0.45"></path>
+            <text x="20" y="10.2" text-anchor="middle" fill="#9ec4a8" font-size="5.5" font-family="IBM Plex Mono, ui-monospace, monospace">N</text>
           </svg>
-          <div>
-            <p class="eyebrow">Vlaanderen door de tijd</p>
-            <h1>Landkaarten</h1>
-          </div>
         </div>
 
-        <form id="search-form" role="search">
-          <label class="sr-only" for="search">Zoek een plaats of adres in Vlaanderen</label>
-          <input
-            id="search"
-            type="search"
-            placeholder="Zoek een plaats in Vlaanderen"
-            autocomplete="off"
-            enterkeyhint="search"
-          />
-          <ul id="suggestions" role="listbox" hidden></ul>
-        </form>
+        <div class="hud-actions">
+          <button id="search-toggle" class="icon-btn" type="button" aria-expanded="false" aria-controls="search-form" aria-label="Zoek een plaats">
+            <svg viewBox="0 0 16 16" aria-hidden="true">
+              <circle cx="7" cy="7" r="4.25" fill="none" stroke="currentColor" stroke-width="1.2"></circle>
+              <path d="M10.2 10.2 L13.6 13.6" stroke="currentColor" stroke-width="1.2"></path>
+            </svg>
+          </button>
+          <button id="compare-toggle" class="icon-btn" type="button" aria-pressed="false" aria-controls="compare-card" aria-label="Vergelijk twee periodes">
+            <svg viewBox="0 0 16 16" aria-hidden="true">
+              <rect x="1.4" y="2.4" width="5.4" height="11.2" fill="none" stroke="currentColor" stroke-width="1.2"></rect>
+              <rect x="9.2" y="2.4" width="5.4" height="11.2" fill="none" stroke="currentColor" stroke-width="1.2"></rect>
+            </svg>
+          </button>
+          <button id="info-toggle" class="icon-btn" type="button" aria-expanded="false" aria-controls="info-card" aria-label="Bron en uitleg">
+            <svg viewBox="0 0 16 16" aria-hidden="true">
+              <circle cx="8" cy="8" r="6.1" fill="none" stroke="currentColor" stroke-width="1.2"></circle>
+              <path d="M8 7.2 V11.4" stroke="currentColor" stroke-width="1.2"></path>
+              <circle cx="8" cy="5.1" r="0.7" fill="currentColor"></circle>
+            </svg>
+          </button>
+        </div>
+      </div>
 
-        <button id="compare-toggle" type="button" aria-pressed="false">Vergelijk</button>
-      </header>
+      <form id="search-form" class="card search-card" role="search" hidden>
+        <label class="sr-only" for="search">Zoek een plaats of adres in Vlaanderen</label>
+        <input
+          id="search"
+          type="search"
+          placeholder="Plaats of adres in Vlaanderen"
+          autocomplete="off"
+          enterkeyhint="search"
+        />
+        <ul id="suggestions" role="listbox" hidden></ul>
+      </form>
+
+      <aside id="compare-card" class="card" hidden>
+        <div class="card-head">
+          <p class="card-kicker">Vergelijk</p>
+          <button id="compare-close" class="icon-btn" type="button" aria-label="Stop vergelijking">
+            <svg viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M4 4 L12 12 M12 4 L4 12" stroke="currentColor" stroke-width="1.2"></path>
+            </svg>
+          </button>
+        </div>
+        <div id="compare-bar">
+          <label>
+            Met
+            <select id="compare-with"></select>
+          </label>
+          <div class="modes">
+            <button id="mode-swipe" type="button" aria-pressed="true">Schuiven</button>
+            <button id="mode-opacity" type="button" aria-pressed="false">Dekking</button>
+          </div>
+          <label id="swipe-label">
+            Schuif
+            <input id="swipe" type="range" min="4" max="96" value="54" />
+          </label>
+          <label id="opacity-label">
+            Dekking
+            <input id="opacity" type="range" min="15" max="100" value="55" />
+          </label>
+        </div>
+      </aside>
+
+      <aside id="info-card" class="card" hidden>
+        <div class="card-head">
+          <p class="card-kicker">Landkaarten</p>
+          <button id="info-close" class="icon-btn" type="button" aria-label="Sluit bron en uitleg">
+            <svg viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M4 4 L12 12 M12 4 L4 12" stroke="currentColor" stroke-width="1.2"></path>
+            </svg>
+          </button>
+        </div>
+        <article id="info"></article>
+        <p class="about">
+          Sleep de liniaal onder het oranje driehoekje, of gebruik de pijltjes. De plek en de zoom blijven staan.
+          Zoeken blijft in Vlaanderen. Een onderbroken streep op de liniaal vraagt later toestemming voor commercieel gebruik.
+        </p>
+      </aside>
+
+      <div class="gauges" aria-label="Positie en schaal">
+        <span id="gauge-lat"></span>
+        <span id="gauge-lng"></span>
+        <span id="gauge-zoom"></span>
+      </div>
 
       <button
         id="swipe-handle"
@@ -61,29 +130,27 @@
         role="slider"
       ></button>
 
-      <aside id="panel">
-        <article id="info" aria-live="off"></article>
-        <div id="compare-bar" hidden>
-          <label>
-            Vergelijk met
-            <select id="compare-with"></select>
-          </label>
-          <div class="modes">
-            <button id="mode-swipe" type="button" aria-pressed="true">Schuiven</button>
-            <button id="mode-opacity" type="button" aria-pressed="false">Dekking</button>
+      <section id="timeline" class="ruler-bar" aria-label="Tijdlijn">
+        <div class="ruler-frame">
+          <div
+            id="ruler-viewport"
+            tabindex="0"
+            role="slider"
+            aria-label="Tijdlijn. Sleep de liniaal of gebruik de pijltjes."
+            aria-keyshortcuts="ArrowLeft ArrowRight"
+          >
+            <div id="ruler-track"></div>
           </div>
-          <label>
-            Schuif
-            <input id="swipe" type="range" min="4" max="96" value="54" />
-          </label>
-          <label>
-            Dekking
-            <input id="opacity" type="range" min="15" max="100" value="55" />
-          </label>
+          <div id="needle" class="needle" aria-hidden="true"></div>
         </div>
-        <nav id="timeline" aria-label="Tijdlijn van kaarten" role="list"></nav>
-        <p class="hint">Pijltjes links en rechts kiezen een ander jaar. De plek blijft staan.</p>
-      </aside>
+        <div class="readout">
+          <div class="readout-name">
+            <p id="name-readout"></p>
+            <p id="coverage-flag" hidden>buiten dekking</p>
+          </div>
+          <p id="year-readout"></p>
+        </div>
+      </section>
 
       <p id="offline" class="offline" hidden>
         De kaarten hebben een internetverbinding nodig. De app zelf blijft open.

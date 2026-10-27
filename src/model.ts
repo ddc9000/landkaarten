@@ -76,6 +76,18 @@ export function kindLabel(kind: MapLayer["kind"]): string {
   return "Kaart";
 }
 
+/** Vaste breedte, zoals een instrument. Breedtegraad past in 8 tekens, lengtegraad in 9. */
+export function formatDegree(value: number, positive: string, negative: string, width = 8): string {
+  const hemi = value >= 0 ? positive : negative;
+  const digits = Math.abs(value).toFixed(5).padStart(width, "0");
+  return `${digits}° ${hemi}`;
+}
+
+export function formatZoom(zoom: number): string {
+  const rounded = Math.round(zoom * 10) / 10;
+  return Number.isInteger(rounded) ? `Z ${rounded.toFixed(0)}` : `Z ${rounded.toFixed(1)}`;
+}
+
 export function assertCatalogue(layers: MapLayer[]): void {
   const ids = new Set<string>();
   for (const layer of layers) {

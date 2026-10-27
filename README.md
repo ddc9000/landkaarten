@@ -1,6 +1,6 @@
 # Landkaarten
 
-Landkaarten legt historische en huidige kaarten van Vlaanderen op dezelfde plek. Je opent op de Markt van Lokeren, zoekt een ander adres in Vlaanderen, en kiest rechts een jaar. De kaart wisselt, de plek en de zoom blijven staan.
+Landkaarten legt historische en huidige kaarten van Vlaanderen op dezelfde plek. Je opent op de Markt van Lokeren, zoekt een ander adres in Vlaanderen, en schuift onderaan door de tijd. De kaart wisselt, de plek en de zoom blijven staan.
 
 De eerste versie is een demo: een volle kaart, een tijdlijn met lagen die echt laden, en een vergelijking tussen twee periodes. Er zit geen betaling in. Lagen die later toestemming of een licentie vragen, hebben in de catalogus `"premium": true`.
 
@@ -29,11 +29,14 @@ Er zijn geen sleutels nodig. Zie `.env.example` als je later een bron met een sl
 
 - De kaart opent op het midden van de Markt in Lokeren (het midden van de officiële bounding box van “Markt, Lokeren” in het Vlaamse adressenregister).
 - Zoeken gebruikt de Geopunt-locatiedienst van Digitaal Vlaanderen en blijft daardoor in Vlaanderen.
-- De tijdlijn toont alleen lagen die op 26 oktober 2026 een echte tegel teruggaven op die Markt.
+- Onderaan staat één liniaal. Het verleden ligt links, vandaag rechts, met een dimme strook toekomst zodat “nu” in het midden kan staan. Een oranje driehoek wijst het gekozen jaar aan. Slepen of vegen klikt vast op de dichtstbijzijnde kaart. Tikken op een streep springt erheen.
+- De tijdlijn toont alleen lagen die op 26 oktober 2026 een echte tegel teruggaven op die Markt. Jaren zonder kaart blijven een korte, doffe streep.
+- Zoeken, vergelijken en de bron zitten achter kleine knoppen. De kaart blijft vol beeld.
+- Een kompas, de coördinaten, de zoom en de schaalbalk blijven als kleine instrumenten op de kaart staan.
 - **Vergelijk** legt twee lagen op elkaar. *Schuiven* trekt een lijn over de kaart, *Dekking* maakt de tweede laag doorzichtig.
 - Pijltjes links en rechts kiezen het vorige of volgende jaar, zolang je niet in een invoerveld zit.
 
-De bron, de licentie, de rechthebbende en een korte uitleg staan bij de actieve laag. Een laag met een stippellijn in de tijdlijn vraagt toestemming voor commercieel gebruik. In deze demo blijft ze zichtbaar.
+De bron, de licentie, de rechthebbende en een korte uitleg staan achter de infoknop. De verplichte bronvermelding blijft ook klein op de kaart zelf, via Leaflet. Een onderbroken streep op de liniaal vraagt toestemming voor commercieel gebruik. In deze demo blijft die laag zichtbaar.
 
 ## Een laag toevoegen
 
@@ -76,7 +79,7 @@ Minimaal voorbeeld:
 }
 ```
 
-`kind` is `historische-kaart`, `luchtfoto` of `actuele-kaart`. `year` sorteert de tijdlijn; `order` breekt gelijke jaren (0 komt eerst). `timelineLabel` is het jaartal op de knop.
+`kind` is `historische-kaart`, `luchtfoto` of `actuele-kaart`. `year` sorteert de tijdlijn; `order` breekt gelijke jaren (0 komt eerst). `timelineLabel` is het jaartal in het groot op de liniaal.
 
 `tiles.type` kan ook `wms` zijn, met `url`, `layers`, `format` (`image/png` of `image/jpeg`), `version` (`1.1.1` of `1.3.0`) en `transparent`. Handig voor een dienst die geen XYZ-tegels aanbiedt.
 
@@ -93,20 +96,21 @@ Neem een laag pas op als een tegel op de bedoelde plek een echt beeld teruggeeft
 | `src/data/layers.json` | De catalogus. Hier voeg je kaarten toe. |
 | `src/data/regions.json` | Gebieden en hun bbox, klaar voor latere regio's. |
 | `src/model.ts` | Sortering, dekking, laagwissel en de premium-selectie. Zonder kaartbibliotheek, daarom goed te testen. |
+| `src/timeline.ts` | De liniaal: jaren, vastklikken, flick. Ook zonder de kaart te testen. |
 | `src/mapView.ts` | Leaflet: tegels, overgang en vergelijking. |
 | `src/main.ts` | De Nederlandse interface. |
 | `tests/` | Tests voor catalogus, tijdlijn en het PWA-manifest. |
 
 ## Publiceren
 
-Deze repo wordt nog nergens online gezet. `npm run build` schrijft een statische site naar `dist/`. `base` in `vite.config.ts` staat op `./`, zodat dezelfde build werkt in de hoofdmap van een domein, in een submap, en later in een Capacitor-app.
+Elke push naar `main` publiceert de site via [`.github/workflows/pages.yml`](.github/workflows/pages.yml). De live site staat op <https://ddc9000.github.io/landkaarten/>. `npm run build` schrijft dezelfde statische site naar `dist/`. `base` in `vite.config.ts` staat op `./`, zodat dezelfde build werkt op GitHub Pages, in de hoofdmap van een domein, en later in een Capacitor-app.
 
 ### Website
 
 1. `npm test` en `npm run build`.
 2. **Netlify:** build command `npm run build`, publish directory `dist`. Geen environment variables nodig.
 3. **Vercel:** framework Vite, output `dist`, build `npm run build`.
-4. **GitHub Pages:** publiceer de inhoud van `dist/` (niet de bronmap). Door de relatieve paden werkt dat ook op `https://<gebruiker>.github.io/<repo>/`.
+4. **GitHub Pages:** een push naar `main` doet dit al. De workflow draait de tests, bouwt `dist/` en publiceert die map.
 5. De site is een PWA. In Chrome of Edge: het installatie-icoon in de adresbalk. Op een telefoon: “Zet op beginscherm”. Het manifest, de pictogrammen en een service worker zitten in de build. De worker bewaart de app-schil (HTML, CSS, JavaScript, pictogrammen), niet de kaarttegels. Zonder netwerk blijft de schil open en meldt de app dat de kaarten een verbinding nodig hebben.
 
 ### App (later, met Capacitor)

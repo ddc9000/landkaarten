@@ -3,6 +3,8 @@ import { layers, lokeren } from "../src/catalogue";
 import {
   activateLayer,
   centuryLabel,
+  formatDegree,
+  formatZoom,
   layerCovers,
   layersNeedingPermission,
   moveView,
@@ -115,6 +117,14 @@ describe("tijdlijn", () => {
     expect(centuryLabel(1846)).toBe("19e eeuw");
     expect(centuryLabel(1939)).toBe("20e eeuw");
     expect(centuryLabel(2025)).toBe("21e eeuw");
+  });
+
+  it("schrijft coördinaten en zoom als instrument", () => {
+    expect(formatDegree(51.104717, "N", "S")).toBe("51.10472° N");
+    expect(formatDegree(3.990575, "E", "W", 9)).toBe("003.99058° E");
+    expect(formatDegree(-1.25, "N", "S")).toBe("01.25000° S");
+    expect(formatZoom(16)).toBe("Z 16");
+    expect(formatZoom(16.24)).toBe("Z 16.2");
   });
 });
 
